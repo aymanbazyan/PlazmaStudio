@@ -1,5 +1,12 @@
 "use strict";
 
+/////////////////////////////////////// Sidebar
+const sidebar = document.querySelector(".sidebar");
+
+if (screen.width <= 530) {
+  sidebar.classList.remove("hidden");
+}
+
 const nav = document.querySelector(".nav");
 
 ///////////////////////////////////////
@@ -59,5 +66,5 @@ const toDark = function () {
   condition = !condition;
 };
 
-let condition = true;
+let condition = false;
 DarkBtn.addEventListener("click", toDark);

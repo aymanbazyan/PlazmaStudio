@@ -1,6 +1,6 @@
 .header {
-  height: 60vh;
-
+  border-bottom: solid 1px var(--temporary-secondary-color);
+  padding-bottom: 3rem;
   &__box {
     display: flex;
     justify-content: space-between;
