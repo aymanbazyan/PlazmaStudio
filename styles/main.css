@@ -271,9 +271,10 @@ li {
   font-size: 2rem;
   text-decoration: underline;
   color: #ff008c;
+  text-decoration: none;
 }
 .header__title .header__link:hover {
-  filter: brightness(10);
+  color: #ff00fe;
 }
 .header__img {
   width: 80rem;

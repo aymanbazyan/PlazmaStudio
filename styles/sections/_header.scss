@@ -29,9 +29,10 @@
       font-size: 2rem;
       text-decoration: underline;
       color: $color-primary-purple-1;
+      text-decoration: none;
 
       &:hover {
-        filter: brightness(10);
+        color: $color-primary-purple-2;
       }
     }
   }
