@@ -91,7 +91,7 @@ body {
 
 .header {
   @include respond(530) {
-    padding-top: 4rem !important;
+    margin-top: 10rem !important;
   }
 
   &__title {

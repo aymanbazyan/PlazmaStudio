@@ -16,6 +16,12 @@ $gradient-primary-purple: linear-gradient(
   $color-primary-purple-2
 );
 
+$gradient-primary-purple-2: linear-gradient(
+  to right bottom,
+  $color-primary-purple-1,
+  $color-primary-purple-2
+);
+
 $color-dark-1: #131313;
 $color-light: #f1f3f5;
 
@@ -44,7 +50,7 @@ body {
   font-family: "Exo", sans-serif;
   background-color: var(--temporary-main-color);
   color: var(--temporary-secondary-color);
-
+  overflow-x: hidden;
   transition: all 0.2s;
 
   position: relative;
@@ -56,15 +62,16 @@ body {
 }
 
 .hidden {
-  display: none !important;
+  visibility: hidden;
+  opacity: 0;
 }
 
-/////////////////////////////////////////////// Sidebar menu
-.sidebar {
-  position: fixed;
-  content: "";
-  top: 1rem;
-  right: 1rem;
+.scaleUp {
+  transform: scale(80);
+}
+
+.height57 {
+  height: 57% !important;
 }
 ///////////////////////////////////////////////
 
@@ -89,6 +96,11 @@ a {
 }
 li {
   list-style: none;
+}
+
+i {
+  width: 3rem;
+  height: 3rem;
 }
 
 .section {
@@ -126,23 +138,24 @@ li {
   position: relative;
 }
 
-.highlight-green::after,
-.highlight-purple::after {
+.highlight-green::before,
+.highlight-purple::before {
   position: absolute;
   content: "";
   width: 100%;
   height: 100%;
+  top: 0;
   left: 0;
   z-index: -1;
   padding: 0.5rem;
-  transform: scale(1.07, 1.05) skewX(-15deg);
   cursor: pointer;
+  transform: scale(1.07, 1.05) skewX(-15deg);
   opacity: 0.7;
 }
-.highlight-green::after {
+.highlight-green::before {
   background-image: $gradient-primary-green;
 }
 
-.highlight-purple::after {
+.highlight-purple::before {
   background-image: $gradient-primary-purple;
 }

@@ -1,15 +1,32 @@
 "use strict";
 
-/////////////////////////////////////// Sidebar
-const sidebar = document.querySelector(".sidebar");
+////////////////////////////////////////////// Mobile nav
+const mobileNavList = document.querySelector(".mobile__nav_list");
+const mobileNavBtn = document.querySelector(".mobile__nav-button");
+const mobileNavBtnIcon = document.querySelector(".mobile__nav-button-icon");
+const mobileNavBackground = document.querySelector(".mobile__nav-background");
 
 if (screen.width <= 530) {
-  sidebar.classList.remove("hidden");
+  mobileNavBtn.classList.remove("hidden");
+  mobileNavBackground.classList.remove("hidden");
 }
+
+const toggleMobileNav = function () {
+  mobileNavList.classList.toggle("hidden");
+  mobileNavBackground.classList.toggle("scaleUp");
+
+  setTimeout(() => {
+    mobileNavList.classList.toggle("height57");
+  }, 300);
+
+  mobileNavBtnIcon.classList.toggle("mobile__nav-clicked");
+};
+
+mobileNavBtn.addEventListener("click", toggleMobileNav);
 
 const nav = document.querySelector(".nav");
 
-///////////////////////////////////////
+////////////////////////////////////////////////////////////
 // Menu fade animation
 const handleHover = function (e) {
   if (e.target.classList.contains("nav__list-item")) {
