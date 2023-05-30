@@ -24,20 +24,20 @@
       font-size: 2.4rem;
       margin-bottom: 6rem;
     }
-
-    & .header__link {
-      font-size: 2rem;
-      text-decoration: underline;
-      color: $color-primary-purple-1;
-
-      &:hover {
-        filter: brightness(10);
-      }
-    }
   }
 
   &__img {
     width: 80rem;
     border-radius: 20px;
+  }
+}
+
+.header__link {
+  font-size: 2rem;
+  text-decoration: none;
+  color: $color-primary-purple-1;
+
+  &:hover {
+    color: $color-primary-purple-2;
   }
 }
