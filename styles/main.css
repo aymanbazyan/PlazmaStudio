@@ -308,7 +308,7 @@ i {
   display: grid;
   justify-items: center;
   align-items: center;
-  gap: 4rem;
+  gap: 1rem;
   transition: all, 0.8s cubic-bezier(0.86, 0, 0.07, 2);
 }
 .mobile__nav_list img {
@@ -323,7 +323,6 @@ i {
   border-radius: 50%;
   top: 4rem;
   right: 3rem;
-  opacity: 0.94;
   transition: all, 0.8s cubic-bezier(0.86, 0, 0.07, 1);
   z-index: 100;
 }
@@ -333,7 +332,7 @@ i {
   right: 25rem !important;
 }
 .mobile__nav .height57 {
-  height: 57% !important;
+  height: 90% !important;
 }
 
 .header {
