@@ -48,7 +48,7 @@ nav.addEventListener("mouseover", handleHover.bind(0.5));
 nav.addEventListener("mouseout", handleHover.bind(1));
 
 //////////////////////////////// Night mode
-const DarkBtn = document.querySelector(".dark-mode");
+const darkBtns = document.querySelectorAll(".dark-mode");
 const titleImg = document.querySelector(".nav__img");
 
 const toDark = function () {
@@ -84,4 +84,5 @@ const toDark = function () {
 };
 
 let condition = false;
-DarkBtn.addEventListener("click", toDark);
+
+darkBtns.forEach((btn) => btn.addEventListener("click", toDark));
