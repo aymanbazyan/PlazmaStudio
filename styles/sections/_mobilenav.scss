@@ -1,3 +1,4 @@
+
 .mobile__nav {
   position: relative;
 
@@ -84,11 +85,6 @@
     align-items: center;
     gap: 1rem;
     transition: all, 0.8s cubic-bezier(0.86, 0, 0.07, 2);
-
-    & img {
-      height: 7rem;
-      width: 7rem;
-    }
   }
 
   .mobile__nav-background {
@@ -118,3 +114,4 @@
   //     height: 10rem !important;
   //   }
 }
+

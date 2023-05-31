@@ -13,7 +13,9 @@ if (screen.width <= 530) {
 
 const toggleMobileNav = function () {
   mobileNavList.classList.toggle("hidden");
+
   mobileNavBackground.classList.toggle("mobile__nav-scaleUp");
+  mobileNavBackground.classList.toggle("scaleUp");
 
   setTimeout(() => {
     mobileNavList.classList.toggle("height57");
