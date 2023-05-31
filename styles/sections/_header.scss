@@ -1,0 +1,43 @@
+.header {
+  border-bottom: solid 1px var(--temporary-secondary-color);
+  padding-bottom: 3rem;
+  &__box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    h1 {
+      font-size: 6rem;
+      color: var(--temporary-secondary-color);
+      font-weight: 600;
+      width: 60rem;
+      cursor: default;
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-size: 2.8rem;
+    }
+
+    h3 {
+      font-size: 2.4rem;
+      margin-bottom: 6rem;
+    }
+  }
+
+  &__img {
+    width: 80rem;
+    border-radius: 20px;
+  }
+}
+
+.header__link {
+  font-size: 2rem;
+  text-decoration: none;
+  color: $color-primary-purple-1;
+
+  &:hover {
+    color: $color-primary-purple-2;
+  }
+}

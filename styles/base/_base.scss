@@ -1,0 +1,154 @@
+$color-primary-green-1: #69db7c;
+$color-primary-green-2: #51cf66;
+
+$gradient-primary-green: linear-gradient(
+  to top left,
+  $color-primary-green-1,
+  $color-primary-green-2
+);
+
+$color-primary-purple-1: #ff008c;
+$color-primary-purple-2: #ff00fe;
+
+$gradient-primary-purple: linear-gradient(
+  to top left,
+  $color-primary-purple-1,
+  $color-primary-purple-2
+);
+
+$gradient-primary-purple-2: linear-gradient(
+  to right bottom,
+  $color-primary-purple-1,
+  $color-primary-purple-2
+);
+
+$color-dark-1: #131313;
+$color-light: #f1f3f5;
+
+:root {
+  --temporary-main-color: #131313;
+  --temporary-secondary-color: #f1f3f5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Exo", sans-serif;
+  background-color: var(--temporary-main-color);
+  color: var(--temporary-secondary-color);
+  overflow-x: hidden;
+  transition: all 0.2s;
+
+  position: relative;
+}
+
+::selection {
+  color: $color-primary-purple-1;
+  background: var(--temporary-secondary-color);
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+///////////////////////////////////////////////
+
+/* scrollbar width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* scrollbar Track */
+::-webkit-scrollbar-track {
+  background: var(--temporary-main-color);
+}
+
+/* scrollbar Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--temporary-secondary-color);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+li {
+  list-style: none;
+}
+
+i {
+  width: 3rem;
+  height: 3rem;
+}
+
+.section {
+  margin: 18rem;
+
+  &__header {
+    &-main {
+      font-size: 2rem;
+      background-image: $gradient-primary-purple;
+      display: inline-block;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s;
+
+      &:hover {
+        transform: skew(5deg);
+      }
+    }
+
+    &-description {
+      font-size: 3rem;
+    }
+  }
+}
+
+.dark-mode {
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+}
+
+.highlight {
+  position: relative;
+}
+
+.highlight-green::before,
+.highlight-purple::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  padding: 0.5rem;
+  cursor: pointer;
+  transform: scale(1.07, 1.05) skewX(-15deg);
+  opacity: 0.7;
+}
+.highlight-green::before {
+  background-image: $gradient-primary-green;
+}
+
+.highlight-purple::before {
+  background-image: $gradient-primary-purple;
+}
