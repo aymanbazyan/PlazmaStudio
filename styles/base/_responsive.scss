@@ -54,7 +54,6 @@ html {
 body {
   @include respond(930) {
     margin: 5rem;
-    text-align: center;
   }
 
   @include respond(730) {
@@ -65,7 +64,22 @@ body {
     margin: 0rem;
   }
 }
+///////////////////////////////////////////// Mobile nav
+.mobile__nav {
+  &-button {
+    @include respond(530) {
+      display: flex !important;
+    }
+  }
 
+  &-background {
+    @include respond(530) {
+      display: block !important;
+    }
+  }
+}
+
+/////////////////////////////////////////////
 .nav {
   @include respond(730) {
     padding: 1rem;
@@ -94,6 +108,10 @@ body {
     margin-top: 10rem !important;
   }
 
+  @include respond(930) {
+    text-align: center;
+  }
+
   &__title {
     h1 {
       @include respond(930) {
@@ -113,13 +131,61 @@ body {
     }
 
     @include respond(530) {
-      width: 45rem !important;
+      width: 40rem !important;
+      height: 25rem !important;
     }
   }
   &__box {
     @include respond(930) {
       display: block !important;
       flex-direction: column !important;
+    }
+  }
+}
+////////////////////////////////////////// services
+
+.services {
+  &__header {
+    @include respond(730) {
+      text-align: center;
+    }
+  }
+
+  &__boxes {
+    @include respond(730) {
+      margin-top: 3rem !important;
+    }
+
+    &_box {
+      @include respond(730) {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      &-textbox-description {
+        @include respond(1600) {
+          font-size: 2.6rem !important;
+        }
+
+        @include respond(1140) {
+          font-size: 2.8rem !important;
+        }
+      }
+
+      img {
+        @include respond(530) {
+          width: 40rem !important;
+          height: 25rem !important;
+        }
+      }
+
+      &:nth-child(2) {
+        .services__boxes_box-picture {
+          @include respond(730) {
+            order: 1 !important;
+          }
+        }
+      }
     }
   }
 }

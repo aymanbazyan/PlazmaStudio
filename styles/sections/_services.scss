@@ -1,0 +1,65 @@
+.services {
+  height: fit-content;
+
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+
+  &__boxes {
+    width: 100%;
+    margin-top: 10rem;
+
+    &_box {
+      width: 100%;
+      padding: 4rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3rem;
+
+      &:not(:last-child) {
+        border-bottom: 1px rgba(51, 51, 51, 0.3) solid;
+      }
+
+      &-textbox {
+        width: 40rem;
+
+        &-title a,
+        &-title a:link,
+        &-title a:visited,
+        &-title a:active,
+        &-title a:focus {
+          color: $color-primary-purple-1;
+          font-size: 3rem;
+          transition: all 0.2s;
+        }
+
+        &-title a:hover {
+          color: $color-primary-purple-2;
+        }
+
+        &-description {
+          font-size: 2rem;
+        }
+      }
+
+      & img {
+        width: 45rem;
+        height: 30rem;
+        border-radius: 15px;
+      }
+    }
+  }
+
+  &__footer {
+    width: 100%;
+    // text-align: center;
+    display: grid;
+    justify-items: center;
+
+    &-more {
+      font-size: 2rem;
+    }
+  }
+}

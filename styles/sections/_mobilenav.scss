@@ -14,7 +14,7 @@
     z-index: 200;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
 
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
 
@@ -91,7 +91,8 @@
     }
   }
 
-  .mobile__nav-background {
+  &-background {
+    display: none;
     position: fixed;
     background-image: $gradient-primary-purple-2;
     width: 3rem;
@@ -109,7 +110,7 @@
     right: 25rem !important;
   }
 
-  .height57 {
+  .height90 {
     height: 90% !important;
   }
 

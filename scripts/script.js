@@ -6,17 +6,12 @@ const mobileNavBtn = document.querySelector(".mobile__nav-button");
 const mobileNavBtnIcon = document.querySelector(".mobile__nav-button-icon");
 const mobileNavBackground = document.querySelector(".mobile__nav-background");
 
-if (screen.width <= 530) {
-  mobileNavBtn.classList.remove("hidden");
-  mobileNavBackground.classList.remove("hidden");
-}
-
 const toggleMobileNav = function () {
   mobileNavList.classList.toggle("hidden");
   mobileNavBackground.classList.toggle("mobile__nav-scaleUp");
 
   setTimeout(() => {
-    mobileNavList.classList.toggle("height57");
+    mobileNavList.classList.toggle("height90");
   }, 300);
 
   mobileNavBtnIcon.classList.toggle("mobile__nav-clicked");
@@ -34,12 +29,10 @@ const handleHover = function (e) {
     const siblings = link
       .closest(".nav__list")
       .querySelectorAll(".nav__list-item");
-    //const logo = link.closest(".nav__list").querySelector("img");
 
     siblings.forEach((el) => {
       if (el !== link) el.style.opacity = this;
     });
-    //logo.style.opacity = this;
   }
 };
 
