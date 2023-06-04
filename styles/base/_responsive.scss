@@ -131,8 +131,8 @@ body {
     }
 
     @include respond(530) {
-      width: 40rem !important;
-      height: 25rem !important;
+      width: 43rem !important;
+      height: 28rem !important;
     }
   }
   &__box {
@@ -186,6 +186,16 @@ body {
           }
         }
       }
+    }
+  }
+}
+
+///////////////////////////////// gallery
+.slider {
+  &__small-pictures {
+    img {
+      width: 10rem;
+      height: 10rem;
     }
   }
 }

@@ -44,7 +44,7 @@ nav.addEventListener("mouseout", handleHover.bind(1));
 const darkBtns = document.querySelectorAll(".dark-mode");
 const titleImg = document.querySelector(".nav__img");
 
-const toDark = function () {
+const switchMode = function () {
   if (condition) {
     /////////////////// Dark mode:
     document.documentElement.style.setProperty(
@@ -57,7 +57,7 @@ const toDark = function () {
       "#131313"
     );
 
-    titleImg.src = "content/title.png";
+    titleImg.src = "content/main/title.png";
   } else {
     /////////////////// Light mode:
     document.documentElement.style.setProperty(
@@ -70,7 +70,7 @@ const toDark = function () {
       "#f1f3f5"
     );
 
-    titleImg.src = "content/title-dark.png";
+    titleImg.src = "content/main/title-dark.png";
   }
 
   condition = !condition;
@@ -78,4 +78,24 @@ const toDark = function () {
 
 let condition = false;
 
-darkBtns.forEach((btn) => btn.addEventListener("click", toDark));
+darkBtns.forEach((btn) => btn.addEventListener("click", switchMode));
+
+////////////////////////////////////////// Gallery slider
+
+document.addEventListener("DOMContentLoaded", function () {
+  const smallPictures = document.querySelectorAll(".slider__small-picture");
+  const bigPicture = document.querySelector(".slider__big-picture img");
+
+  smallPictures.forEach(function (picture) {
+    picture.addEventListener("click", function () {
+      const imagePath = picture.querySelector("img").src;
+      bigPicture.src = imagePath;
+
+      smallPictures.forEach(function (smallPic) {
+        smallPic.classList.remove("active");
+      });
+
+      picture.classList.add("active");
+    });
+  });
+});

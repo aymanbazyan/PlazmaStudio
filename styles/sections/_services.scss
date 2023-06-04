@@ -49,6 +49,18 @@
         height: 30rem;
         border-radius: 15px;
       }
+
+      &-picture {
+        position: relative;
+        span {
+          position: absolute;
+          bottom: 1rem;
+          right: 1rem;
+          font-size: 1.8rem;
+          z-index: 1;
+          font-family: "Cairo", sans-serif;
+        }
+      }
     }
   }
 
