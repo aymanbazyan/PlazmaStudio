@@ -1,0 +1,99 @@
+///////////////////////////////////////// Original components
+
+::selection {
+  color: $color-primary-purple-1;
+  background: var(--temporary-secondary-color);
+}
+
+body {
+  font-family: "Exo", sans-serif;
+  background-color: var(--temporary-main-color);
+  color: var(--temporary-secondary-color);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+li {
+  list-style: none;
+}
+
+i {
+  width: 3rem;
+  height: 3rem;
+}
+
+///////////////////////////////////////// Texts
+
+.section {
+  &__header {
+    &-main {
+      font-size: 2rem;
+      background-image: $gradient-primary-purple;
+      display: inline-block;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s;
+
+      &:hover {
+        transform: skew(5deg);
+      }
+    }
+
+    &-description {
+      font-size: 3rem;
+    }
+  }
+}
+
+.highlight {
+  position: relative;
+}
+
+.highlight-green::before,
+.highlight-purple::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  padding: 0.5rem;
+  cursor: pointer;
+  transform: scale(1.07, 1.05) skewX(-15deg);
+  opacity: 0.7;
+}
+.highlight-green::before {
+  background-image: $gradient-primary-green;
+}
+
+.highlight-purple::before {
+  background-image: $gradient-primary-purple;
+}
+
+//////////////////////////////// Buttons
+.btn-main {
+  font-size: 2rem;
+  background-color: #fff;
+  margin: 1rem;
+  padding: 1.8rem 4rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0rem 3rem 5rem rgba(#000, 0.1);
+
+  transition: all 0.2s;
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0rem 3rem 5rem rgba(#000, 0.3);
+  }
+
+  &:active {
+    transform: translateY(1px);
+    box-shadow: 0rem 3rem 5rem rgba(#000, 0.2);
+  }
+}
