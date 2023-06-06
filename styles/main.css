@@ -104,6 +104,10 @@ button {
   cursor: pointer;
 }
 
+.nav__list:hover .nav__list-item:not(:hover) {
+  opacity: 0.5;
+}
+
 @media only screen and (max-width: 100em) {
   html {
     font-size: 50%;

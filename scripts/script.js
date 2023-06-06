@@ -19,27 +19,6 @@ const toggleMobileNav = function () {
 
 mobileNavBtn.addEventListener("click", toggleMobileNav);
 
-const nav = document.querySelector(".nav");
-
-////////////////////////////////////////////////////////////
-// Menu fade animation
-const handleHover = function (e) {
-  if (e.target.classList.contains("nav__list-item")) {
-    const link = e.target;
-    const siblings = link
-      .closest(".nav__list")
-      .querySelectorAll(".nav__list-item");
-
-    siblings.forEach((el) => {
-      if (el !== link) el.style.opacity = this;
-    });
-  }
-};
-
-// Passing "argument" into handler
-nav.addEventListener("mouseover", handleHover.bind(0.5));
-nav.addEventListener("mouseout", handleHover.bind(1));
-
 //////////////////////////////// Night mode
 const darkBtns = document.querySelectorAll(".dark-mode");
 const titleImg = document.querySelector(".nav__img");

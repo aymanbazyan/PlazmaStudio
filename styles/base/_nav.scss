@@ -25,7 +25,6 @@
     gap: 3rem;
 
     &-item {
-      // color: #f1f3f5;
       transition: all 0.2s;
     }
   }
@@ -34,4 +33,8 @@
     width: 20rem;
     cursor: pointer;
   }
+}
+
+.nav__list:hover .nav__list-item:not(:hover) {
+  opacity: 0.5;
 }
