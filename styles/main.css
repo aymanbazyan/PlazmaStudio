@@ -523,12 +523,16 @@ i {
   justify-items: center;
 }
 .slider__big-picture {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 50rem;
   display: grid;
   justify-items: center;
+  align-items: center;
 }
 .slider__big-picture img {
   width: 100%;
-  height: 50rem;
+  max-height: 50rem;
 }
 .slider__small-pictures {
   width: 90%;
