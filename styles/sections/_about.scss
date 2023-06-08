@@ -1,0 +1,30 @@
+.about {
+  margin-bottom: 10rem !important;
+  display: grid;
+  justify-items: center;
+
+  &__header {
+    justify-self: start;
+  }
+
+  &__boxes {
+    width: 100rem;
+    margin-top: 10rem;
+    display: flex;
+    justify-content: space-between;
+
+    &-box {
+      width: 40rem;
+      text-align: center;
+
+      &-title {
+        font-size: 5rem;
+        margin-bottom: 1rem;
+      }
+
+      &-description {
+        font-size: 2rem;
+      }
+    }
+  }
+}

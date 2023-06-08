@@ -195,6 +195,10 @@ body {
 }
 //////////////////////////////// contact
 .contact {
+  @include respond(530) {
+    padding-bottom: 25rem !important;
+  }
+
   &__grid {
     @include respond(530) {
       grid-template-columns: none !important;
@@ -217,6 +221,23 @@ body {
     &-long {
       @include respond(530) {
         grid-column: 1 !important;
+      }
+    }
+  }
+}
+
+///////////////////////////////// about
+.about {
+  &__boxes {
+    @include respond(730) {
+      width: fit-content !important;
+      flex-direction: column;
+      gap: 5rem;
+    }
+
+    &-box {
+      @include respond(530) {
+        width: fit-content !important;
       }
     }
   }
