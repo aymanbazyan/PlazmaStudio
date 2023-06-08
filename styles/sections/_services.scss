@@ -1,13 +1,9 @@
 .services {
-  height: fit-content;
-
-  display: grid;
-  justify-items: center;
-  justify-content: center;
-
   &__boxes {
     width: 100%;
     margin-top: 10rem;
+    display: grid;
+    justify-content: center;
 
     &_box {
       width: 100%;
