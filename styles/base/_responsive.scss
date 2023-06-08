@@ -145,12 +145,6 @@ body {
 ////////////////////////////////////////// services
 
 .services {
-  &__header {
-    @include respond(730) {
-      text-align: center;
-    }
-  }
-
   &__boxes {
     @include respond(730) {
       margin-top: 3rem !important;
@@ -196,6 +190,34 @@ body {
     img {
       width: 10rem;
       height: 10rem;
+    }
+  }
+}
+//////////////////////////////// contact
+.contact {
+  &__grid {
+    @include respond(530) {
+      grid-template-columns: none !important;
+      margin-top: 3rem;
+      gap: 2rem !important;
+    }
+
+    @include respond(930) {
+      margin: 8rem 0 !important;
+    }
+
+    &-box {
+      @include respond(530) {
+        width: 100%;
+        max-width: 50rem;
+        margin: 0 auto;
+      }
+    }
+
+    &-long {
+      @include respond(530) {
+        grid-column: 1 !important;
+      }
     }
   }
 }

@@ -218,11 +218,6 @@ button {
 }
 
 @media only screen and (max-width: 45.625em) {
-  .services__header {
-    text-align: center;
-  }
-}
-@media only screen and (max-width: 45.625em) {
   .services__boxes {
     margin-top: 3rem !important;
   }
@@ -258,6 +253,31 @@ button {
 .slider__small-pictures img {
   width: 10rem;
   height: 10rem;
+}
+
+@media only screen and (max-width: 33.125em) {
+  .contact__grid {
+    grid-template-columns: none !important;
+    margin-top: 3rem;
+    gap: 2rem !important;
+  }
+}
+@media only screen and (max-width: 58.125em) {
+  .contact__grid {
+    margin: 8rem 0 !important;
+  }
+}
+@media only screen and (max-width: 33.125em) {
+  .contact__grid-box {
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 33.125em) {
+  .contact__grid-long {
+    grid-column: 1 !important;
+  }
 }
 
 ::-moz-selection {
@@ -477,16 +497,11 @@ i {
   color: #ff00fe;
 }
 
-.services {
-  height: -moz-fit-content;
-  height: fit-content;
-  display: grid;
-  justify-items: center;
-  justify-content: center;
-}
 .services__boxes {
   width: 100%;
   margin-top: 10rem;
+  display: grid;
+  justify-content: center;
 }
 .services__boxes_box {
   width: 100%;
@@ -588,4 +603,44 @@ i {
 }
 .slider__small-pictures .slider__small-picture.active img {
   border-color: #ff008c;
+}
+
+.contact__grid {
+  height: 30rem;
+  margin: 8rem 15rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1rem;
+}
+.contact__grid-box {
+  padding: 2rem;
+  text-align: center;
+  border: 1px solid var(--temporary-secondary-color);
+  border-radius: 10px;
+  display: grid;
+  justify-items: center;
+  transition: all 0.2s;
+}
+.contact__grid-box:hover {
+  border-color: #ff008c;
+}
+.contact__grid-box-icon {
+  font-size: 4rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: transparent;
+  background-image: linear-gradient(to top left, #ff008c, #ff00fe);
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+.contact__grid-box-title {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.contact__grid-long {
+  grid-column: span 3;
 }
