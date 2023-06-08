@@ -256,6 +256,11 @@ button {
 }
 
 @media only screen and (max-width: 33.125em) {
+  .contact {
+    padding-bottom: 25rem !important;
+  }
+}
+@media only screen and (max-width: 33.125em) {
   .contact__grid {
     grid-template-columns: none !important;
     margin-top: 3rem;
@@ -277,6 +282,21 @@ button {
 @media only screen and (max-width: 33.125em) {
   .contact__grid-long {
     grid-column: 1 !important;
+  }
+}
+
+@media only screen and (max-width: 45.625em) {
+  .about__boxes {
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+    flex-direction: column;
+    gap: 5rem;
+  }
+}
+@media only screen and (max-width: 33.125em) {
+  .about__boxes-box {
+    width: -moz-fit-content !important;
+    width: fit-content !important;
   }
 }
 
@@ -643,4 +663,30 @@ i {
 }
 .contact__grid-long {
   grid-column: span 3;
+}
+
+.about {
+  margin-bottom: 10rem !important;
+  display: grid;
+  justify-items: center;
+}
+.about__header {
+  justify-self: start;
+}
+.about__boxes {
+  width: 100rem;
+  margin-top: 10rem;
+  display: flex;
+  justify-content: space-between;
+}
+.about__boxes-box {
+  width: 40rem;
+  text-align: center;
+}
+.about__boxes-box-title {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+}
+.about__boxes-box-description {
+  font-size: 2rem;
 }
