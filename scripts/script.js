@@ -19,27 +19,6 @@ const toggleMobileNav = function () {
 
 mobileNavBtn.addEventListener("click", toggleMobileNav);
 
-const nav = document.querySelector(".nav");
-
-////////////////////////////////////////////////////////////
-// Menu fade animation
-const handleHover = function (e) {
-  if (e.target.classList.contains("nav__list-item")) {
-    const link = e.target;
-    const siblings = link
-      .closest(".nav__list")
-      .querySelectorAll(".nav__list-item");
-
-    siblings.forEach((el) => {
-      if (el !== link) el.style.opacity = this;
-    });
-  }
-};
-
-// Passing "argument" into handler
-nav.addEventListener("mouseover", handleHover.bind(0.5));
-nav.addEventListener("mouseout", handleHover.bind(1));
-
 //////////////////////////////// Night mode
 const darkBtns = document.querySelectorAll(".dark-mode");
 const titleImg = document.querySelector(".nav__img");
@@ -98,4 +77,20 @@ document.addEventListener("DOMContentLoaded", function () {
       picture.classList.add("active");
     });
   });
+});
+//////////////////////////////////////////////////// smooth scroll buttons
+document.querySelectorAll(".btnScrollTo").forEach((link) => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    //this.href // this will give the absolute url
+    const id = this.getAttribute("href"); // this will give the href, #section--1 for example
+    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+  });
+});
+
+//////////////// close mobile nav when i click on link
+
+document.querySelector(".mobile__nav_list").addEventListener("click", (e) => {
+  if (e.target.classList.contains("btnScrollTo")) toggleMobileNav();
 });

@@ -1,13 +1,9 @@
 .services {
-  height: fit-content;
-
-  display: grid;
-  justify-items: center;
-  justify-content: center;
-
   &__boxes {
     width: 100%;
     margin-top: 10rem;
+    display: grid;
+    justify-content: center;
 
     &_box {
       width: 100%;
@@ -25,17 +21,14 @@
       &-textbox {
         width: 40rem;
 
-        &-title a,
-        &-title a:link,
-        &-title a:visited,
-        &-title a:active,
-        &-title a:focus {
+        &-title {
           color: $color-primary-purple-1;
           font-size: 3rem;
           transition: all 0.2s;
+          cursor: default;
         }
 
-        &-title a:hover {
+        &-title:hover {
           color: $color-primary-purple-2;
         }
 
@@ -53,6 +46,7 @@
       &-picture {
         position: relative;
         span {
+          color: $color-light;
           position: absolute;
           bottom: 1rem;
           right: 1rem;
