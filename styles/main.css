@@ -41,6 +41,10 @@ button {
   opacity: 0;
 }
 
+.sticky {
+  position: fixed !important;
+}
+
 /* scrollbar width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -77,6 +81,8 @@ button {
 }
 
 .nav {
+  background-color: var(--temporary-main-color);
+  z-index: 10;
   padding: 2rem 10rem;
   border-bottom: #3c3f42 2px solid;
   top: 0;
