@@ -21,17 +21,14 @@
       &-textbox {
         width: 40rem;
 
-        &-title a,
-        &-title a:link,
-        &-title a:visited,
-        &-title a:active,
-        &-title a:focus {
+        &-title {
           color: $color-primary-purple-1;
           font-size: 3rem;
           transition: all 0.2s;
+          cursor: default;
         }
 
-        &-title a:hover {
+        &-title:hover {
           color: $color-primary-purple-2;
         }
 

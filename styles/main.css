@@ -41,6 +41,10 @@ button {
   opacity: 0;
 }
 
+.btn--scroll-to {
+  cursor: pointer;
+}
+
 /* scrollbar width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -537,12 +541,13 @@ i {
 .services__boxes_box-textbox {
   width: 40rem;
 }
-.services__boxes_box-textbox-title a, .services__boxes_box-textbox-title a:link, .services__boxes_box-textbox-title a:visited, .services__boxes_box-textbox-title a:active, .services__boxes_box-textbox-title a:focus {
+.services__boxes_box-textbox-title {
   color: #ff008c;
   font-size: 3rem;
   transition: all 0.2s;
+  cursor: default;
 }
-.services__boxes_box-textbox-title a:hover {
+.services__boxes_box-textbox-title:hover {
   color: #ff00fe;
 }
 .services__boxes_box-textbox-description {

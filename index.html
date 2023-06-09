@@ -8,9 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cairo&family=Exo:wght@500;600&display=swap" rel="stylesheet" />
-  <script defer src="scripts/script.js"></script>
   <script src="https://kit.fontawesome.com/115a1d12a9.js" crossorigin="anonymous"></script>
-
+  <script defer src="scripts/script.js"></script>
   <link rel="stylesheet" href="styles/main.css" />
   <link rel="shortcut icon" href="content/main/icon.png" type="image/x-icon" />
   <title>Plazma Studio</title>
@@ -24,16 +23,16 @@
     </button>
     <div class="mobile__nav-background"></div>
     <ul class="mobile__nav_list hidden">
-      <a href="#">
+      <a href="#section-1">
         <li class="mobile__nav_list-item">Services</li>
       </a>
-      <a href="#">
+      <a href="#section-2">
         <li class="mobile__nav_list-item">Gallery</li>
       </a>
-      <a href="#">
+      <a href="#section-3">
         <li class="mobile__nav_list-item">Contact</li>
       </a>
-      <a href="#">
+      <a href="#section-4">
         <li class="mobile__nav_list-item">About us</li>
       </a>
       <button class="dark-mode">
@@ -45,18 +44,26 @@
   <nav class="nav">
     <img class="nav__img" src="content/main/title.png" alt="logo picture" />
     <ul class="nav__list">
-      <a href="#">
-        <li class="nav__list-item">Services</li>
-      </a>
-      <a href="#">
-        <li class="nav__list-item">Gallery</li>
-      </a>
-      <a href="#">
-        <li class="nav__list-item">Contact</li>
-      </a>
-      <a href="#">
-        <li class="nav__list-item">About us</li>
-      </a>
+      <li class="nav__list-item">
+        <a class="btnScrollTo" href="#section-1">
+          Services
+        </a>
+      </li>
+      <li class="nav__list-item">
+        <a class="btnScrollTo" href="#section-2">
+          Gallery
+        </a>
+      </li>
+      <li class="nav__list-item">
+        <a class="btnScrollTo" href="#section-3">
+          Contact
+        </a>
+      </li>
+      <li class="nav__list-item">
+        <a class="btnScrollTo" href="#section-4">
+          About us
+        </a>
+      </li>
       <button class="dark-mode">
         <img src="content/main/day-and-night.png" alt="switch dark mode" />
       </button>
@@ -80,7 +87,7 @@
           Social media - prints - logos - visual identities
         </h3>
         <span class="header__link">
-          <a href="#">
+          <a class="btnScrollTo" href="#section-1">
             Learn more
             <i class="fa-solid fa-arrow-down"></i>
           </a>
@@ -102,10 +109,7 @@
       <div class="services__boxes_box">
         <div class="services__boxes_box-textbox">
           <h1 class="services__boxes_box-textbox-title">
-            <a href="#">
-              Marketing
-              <i class="fa-sharp fa-solid fa-arrow-right"></i>
-            </a>
+            Marketing
           </h1>
           <h2 class="services__boxes_box-textbox-description">
             Elevate your brand with our comprehensive marketing services. From captivating visual content to targeted
@@ -128,10 +132,7 @@
         </div>
         <div class="services__boxes_box-textbox">
           <h1 class="services__boxes_box-textbox-title">
-            <a href="#">
-              Designing
-              <i class="fa-sharp fa-solid fa-arrow-right"></i>
-            </a>
+            Designing
           </h1>
           <h2 class="services__boxes_box-textbox-description">
             Unleash your vision with our creative design services. Our talented team delivers stunning logos, graphics,
@@ -143,10 +144,7 @@
       <div class="services__boxes_box">
         <div class="services__boxes_box-textbox">
           <h1 class="services__boxes_box-textbox-title">
-            <a href="#">
-              Capturing for Events
-              <i class="fa-sharp fa-solid fa-arrow-right"></i>
-            </a>
+            Capturing for Events
           </h1>
           <h2 class="services__boxes_box-textbox-description">
             Trust us to capture your special moments with expertise and creativity. Our stunning photographs will
@@ -191,7 +189,9 @@
         </ul>
       </div>
       <button class="btn-main">
-        Contact us
+        <a class="btnScrollTo" href="#section-3">
+          Contact us
+        </a>
       </button>
     </div>
   </section>
