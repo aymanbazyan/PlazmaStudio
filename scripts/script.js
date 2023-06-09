@@ -79,23 +79,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 //////////////////////////////////////////////////// smooth scroll buttons
-// const btnScrollTo = document.querySelector(".btn--scroll-to");
-// const section1 = document.querySelector("#section-1");
-
-// btnScrollTo.addEventListener("click", function (e) {
-//   section1.scrollIntoView({ behavior: "smooth" });
-// });
-
-// document.querySelector(".nav__list").addEventListener("click", function (e) {
-//   e.preventDefault();
-
-//   // Matching strategy
-//   if (e.target.classList.contains("nav__list-item-link")) {
-//     const id = e.target.getAttribute("href"); // this will give the href, #section-1 for example
-//     document.querySelector(id).scrollIntoView({ behavior: "smooth" });
-//   }
-// });
-
 document.querySelectorAll(".btnScrollTo").forEach((link) => {
   link.addEventListener("click", function (e) {
     e.preventDefault();
@@ -104,4 +87,10 @@ document.querySelectorAll(".btnScrollTo").forEach((link) => {
     const id = this.getAttribute("href"); // this will give the href, #section--1 for example
     document.querySelector(id).scrollIntoView({ behavior: "smooth" });
   });
+});
+
+//////////////// close mobile nav when i click on link
+
+document.querySelector(".mobile__nav_list").addEventListener("click", (e) => {
+  if (e.target.classList.contains("btnScrollTo")) toggleMobileNav();
 });
